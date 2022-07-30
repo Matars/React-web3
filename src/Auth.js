@@ -73,14 +73,14 @@ export const Auth = () => {
         <Heading size={"lg"} textAlign="center">
           Twitter Clone with Smart Contracts
         </Heading>
-        {authError && (<ErrorBox title="Authentication Error" msg="Error" />)}
+        {authError && (<ErrorBox title="Authentication Error" msg={authError.message} />)}
       </Container>
       <Button isLoading={isAuthenticating} onClick={() => authenticate()}>
         Login with Metamask
       </Button>
-      <Text textAlign="center">Else</Text>
+      {/* <Text textAlign="center">Else</Text>
       <SignUp />
-      <LogIn />
+      <LogIn /> */}
     </Stack>
   );
 };
